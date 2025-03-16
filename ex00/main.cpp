@@ -3,6 +3,9 @@
 int main()
 {
     ClapTrap robot("Saad");
+    ClapTrap a(robot);
+    ClapTrap b;
+    b = a;
     
     robot.attack("Target A");
     robot.takeDamage(5);
