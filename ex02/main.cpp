@@ -1,3 +1,4 @@
+#include "FragTrap.hpp"
 #include "ScavTrap.hpp"
 
 int main()
@@ -35,5 +36,21 @@ int main()
         robot.guardGate();
     }
     
+      { 
+        std::cout<<"****************FragTrap test*************"<<std::endl;
+        FragTrap robot("Saad");
+        FragTrap a(robot);
+        FragTrap b;
+        b = a;
+        
+        robot.attack("Target A");
+        robot.takeDamage(5);
+        robot.beRepaired(3);
+        
+        robot.takeDamage(15); // This should bring HP to 0
+        robot.attack("Target B"); // Should fail because HP is 0
+        robot.beRepaired(5); // Should fail because HP is 0
+        robot.highFivesGuys();
+    }
     return 0;
 }

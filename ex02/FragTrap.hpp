@@ -12,6 +12,7 @@ class FragTrap: public ClapTrap
         FragTrap &operator=(const FragTrap &FragTrap);
         ~FragTrap();
 
+        void highFivesGuys(void);
       
 
 };
